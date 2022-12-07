@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Proyecto_MVT.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["C:/Users/Fede/Documents/Cursos Coderhouse/Python/MVT+Baldasso_Federico/Proyecto_MVT/AppMVT/Templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

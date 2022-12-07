@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'AppMVT/css/styles.css' %}">
+    <title>Primer MVT</title>
+</head>
+<body>
+    <h1>ESTE ES NUESTRO PRIMER MVT</h1>
+    <h2>Estamos en el curso de Python de la 34645</h2>
+    <h3>Integrantes de la Familia</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Parentesco</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Fecha de Nacimiento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- % for pariente in parientes % -->
+            <tr>
+                <td>{{ parentesco }}</td>
+                <td>{{ nombre }}</td>
+                <td>{{ apellido }}</td>
+                <td>{{ edad }}</td>
+                <td>{{ fecha_nacimiento }}</td>
+            </tr>
+            <!-- % endfor %      -->
+        </tbody>         
+      </table>    
+</body>
+</html>
+
+
