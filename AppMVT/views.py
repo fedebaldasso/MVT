@@ -10,14 +10,19 @@ def inicio(request):
     return HttpResponse("Estoy en el inicio!")
 
 def familiar(request):
-    pariente= Familiar(parentesco="Padre", nombre="Roberto", apellido="Baldasso", edad=67, fecha_nacimiento="1955-07-17")
-    pariente.save()
-    parientes= {"parentesco": pariente.parentesco, "nombre": pariente.nombre, "apellido": pariente.apellido, "edad": pariente.edad, "fecha_nacimiento": pariente.fecha_nacimiento }
+    familiar1= Familiar(parentesco="Padre", nombre="Roberto", apellido="Baldasso", edad=67, fecha_nacimiento="1955-07-17")
+    familiar1.save()
+    familiar2= Familiar(parentesco="Madre", nombre="Liliana", apellido="Martínez", edad=63, fecha_nacimiento="1959-09-30")
+    familiar2.save()
+    familiar3= Familiar(parentesco="Hermano", nombre="Franco", apellido="Baldasso", edad=27, fecha_nacimiento="1995-07-02")
+    familiar3.save()
+    familiares= {familiar1,familiar2,familiar3}
     
-    template= loader.get_template("template1.html") #Abre, lee y cierra el archivo
+    # template= loader.get_template("template1.html") #Abre, lee y cierra el archivo
 
-    familiares=template.render(parientes)#Llena mis espacios en blanco con los datos de mi contexto
-    return HttpResponse(familiares)
+    # familia=template.render(familiares)#Llena mis espacios en blanco con los datos de mi contexto
+    return render(request,"template1.html", {"parientes":familiares})
+    # return HttpResponse(familia)
 
 
 

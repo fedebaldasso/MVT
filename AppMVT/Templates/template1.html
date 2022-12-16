@@ -23,15 +23,15 @@
             </tr>
         </thead>
         <tbody>
-            <!-- % for pariente in parientes % -->
+            {% for familiar in parientes %}
             <tr>
-                <td>{{ parentesco }}</td>
-                <td>{{ nombre }}</td>
-                <td>{{ apellido }}</td>
-                <td>{{ edad }}</td>
-                <td>{{ fecha_nacimiento }}</td>
+                <td>{{ familiar.parentesco }}</td>
+                <td>{{ familiar.nombre }}</td>
+                <td>{{ familiar.apellido }}</td>
+                <td>{{ familiar.edad }}</td>
+                <td>{{ familiar.fecha_nacimiento }}</td>
             </tr>
-            <!-- % endfor %      -->
+            {% endfor %}
         </tbody>         
       </table>    
 </body>
